@@ -60,4 +60,18 @@ apt-get -fy install
 ```
 
 
+```
+apt-get install \
+blt calculix-ccx dbus dbus-x11 fonts-liberation \
+fonts-lyx freecad-daily gconf-service gconf-service-backend \
+gconf2 gconf2-common graphviz hicolor-icon-theme libatk1.0-0 \
+libatk1.0-data libcap-ng0 libcdt5 libcgraph6 libgconf-2-4 \
+libgd3 libglade2-0 libgtk2.0-0 libgtk2.0-bin libgtk2.0-common \
+libgvc6 libgvpr2 libjs-jquery-ui libpathplan4 libqtassistantclient4 \
+libsoqt4-20 libspooles2.2 libxcursor1 psmisc python-cairo \
+python-cycler python-dateutil python-glade2 python-gobject-2 \
+python-gtk2 python-imaging python-matplotlib python-matplotlib-data \
+python-numpy python-pil python-pivy python-pyparsing python-qt4 \
+python-qt4-gl python-sip python-tk python-tz tk8.6-blt2.5 ttf-bitstream-vera
+```
 
