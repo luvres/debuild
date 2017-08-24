@@ -46,9 +46,16 @@ docker run -ti --rm --name Ubuntu \
 izone/debuild:xenial bash
 ```
 ```
-apt-get install wget
+apt-get install -y wget netgen-headers
+```
+```
 wget -c http://pi/FreeCAD/packages/freecad-daily_0.17~alpha1%2bgit201708222315~ubuntu16.04.1_amd64.deb -O freecad-daily_amd64.deb
+
+wget -c http://pi/FreeCAD/packages/freecad-daily_0.17_NETGEN~alpha1%2bgit201708222315~ubuntu16.04.1_amd64.deb -O freecad-daily_amd64.deb
+
 dpkg -i freecad-daily_amd64.deb
+```
+```
 apt-get -fy install
 ```
 
