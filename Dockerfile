@@ -23,6 +23,7 @@ RUN \
 		tree \
 		curl \
 		dh-autoreconf \
+		nano \
   \
 	&& apt-get clean \
   \

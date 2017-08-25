@@ -61,6 +61,17 @@ RUN apt-get install -y \
 		libboost-system1.55-dev \
 		libboost-thread1.55-dev
 
+### libCoin 3.1.4
+#-----------------
+RUN apt-get install -y \
+		libcoin80 \
+		libcoin80-dev
+
+### Eigen 3.2.2 - 3.3.0(backports)
+#----------------------------------
+RUN apt-get install -y \
+  	  libeigen3-dev
+
 ### libMED 3.2.0
 #-------------
 RUN \
@@ -68,18 +79,6 @@ RUN \
     wget -c http://pi/FreeCAD/packages/med_${med_VERSION}-jessie_amd64.deb \
     && dpkg -i med_${med_VERSION}-jessie_amd64.deb \
     && rm med_${med_VERSION}-jessie_amd64.deb
-
-### libCoin 3.1.4
-#-----------------
-RUN apt-get install -y \
-		libcoin80 \
-		libcoin80-dev 
-
-### Eigen 3.2.2 - 3.3.0(backports)
-#----------------------------------
-RUN apt-get install -y \
-  	  libeigen3-dev 
-
 
 ### OCCT 7.1.0
 #-------------
@@ -100,14 +99,6 @@ RUN \
     wget -c http://pi/FreeCAD/packages/vtk_${vtk_VERSION}-jessie_amd64.deb \
     && dpkg -i vtk_${vtk_VERSION}-jessie_amd64.deb \
     && rm vtk_${vtk_VERSION}-jessie_amd64.deb
-
-
-### FreeCAD latest Github commit
-#--------------------------------
-# get FreeCAD
-RUN \
-    cd \
-    && git clone https://github.com/FreeCAD/FreeCAD 
 
 
 #### Netgen 5.3.1
@@ -144,3 +135,5 @@ RUN \
   \
     && cp -fR libsrc /usr/share/netgen 
 
+
+WORKDIR /root/build
