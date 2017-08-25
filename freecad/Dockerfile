@@ -4,9 +4,6 @@ FROM izone/debuild:jessie
 
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
-ENV FREECAD=/opt/FreeCAD
-RUN mkdir -p $FREECAD 
-
 ### Packages deps
 #-----------------
 RUN apt-get update \
